@@ -1,0 +1,29 @@
+<?php
+// Connect to the database
+$conn = new mysqli("localhost", "root", "", "your_database_name");
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Get form data
+$customer_id = $_POST['customer_id'];
+$service_id = $_POST['service_id'];
+$employee_id = $_POST['employee_id'];
+$comments = $_POST['comments'];
+$rating = $_POST['rating'];
+$review_date = date('Y-m-d'); // current date
+
+// Insert data into the reviews table
+$sql = "INSERT INTO reviews (CustomerID, ServiceID, EmployeeID, Comments, Rating, ReviewDate)
+        VALUES ('$customer_id', '$service_id', '$employee_id', '$comments', '$rating', '$review_date')";
+
+if ($conn->query($sql) === TRUE) {
+    echo "Thank you for your feedback!";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
+?>
