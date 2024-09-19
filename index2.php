@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-include 'header.php';
+include 'header2.php';
 ?>
 <html lang="en">
     <head>
@@ -19,10 +19,9 @@ include 'header.php';
     
     <header>
         <div class="profile-container">
-            <?php if ($user_logged_in): ?>
+            <?php if (isset($_POST['ic']) && isset($_POST['cust_pwd'])): ?>
                 <img src="<?php echo htmlspecialchars($profile_picture_url); ?>" alt="Profile Picture" class="profile-picture" onclick="window.location.href='profile.php';">
-            <?php else: ?>
-                <a href="login.php" class="login-signup">Login / Sign Up</a>
+                
             <?php endif; ?>
         </div>
     </header>
