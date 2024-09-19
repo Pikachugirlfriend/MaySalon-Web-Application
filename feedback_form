@@ -1,0 +1,87 @@
+<?php
+# To connect with SQL
+$con = mysqli_connect("localhost", "root", "", "salon");
+# Prompt message if connection fails
+if (mysqli_connect_errno()){
+    echo "The database is not connected! " . mysqli_connect_error();
+}
+
+# Check if the form is submitted
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $customer_id = $_POST['customer_id'];  # Assuming customer_id is obtained elsewhere
+    $service_id = $_POST['service_id'];    # Assuming service_id is obtained elsewhere
+    $employee_id = $_POST['employee_id'];  # Assuming employee_id is obtained elsewhere
+    $comments = mysqli_real_escape_string($con, $_POST['comments']);
+    $rating = (int)$_POST['rating'];
+    $review_date = date('Y-m-d H:i:s');    # Current timestamp
+
+    # Insert the feedback into the reviews table
+    $sql = "INSERT INTO reviews (CustomerID, ServiceID, EmployeeID, Comments, ReviewDate, Rating) 
+            VALUES ('$customer_id', '$service_id', '$employee_id', '$comments', '$review_date', '$rating')";
+
+    if (mysqli_query($con, $sql)) {
+        echo "Feedback submitted successfully!";
+    } else {
+        echo "Error: " . mysqli_error($con);
+    }
+}
+
+# Close the connection
+mysqli_close($con);
+?>
+
+<!-- Feedback Form -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Feedback Form</title>
+</head>
+<body>
+    <h2>Submit Your Feedback</h2>
+    <form action="" method="POST">
+        <label for="comments">Comments:</label><br>
+        <textarea name="comments" id="comments" rows="4" cols="50" required></textarea><br><br>
+
+        <label for="rating">Rating:</label><br>
+        <select name="rating" id="rating" required>
+            <option value="1">1 - Poor</option>
+            <option value="2">2 - Fair</option>
+            <option value="3">3 - Good</option>
+            <option value="4">4 - Very Good</option>
+            <option value="5">5 - Excellent</option>
+        </select><br><br>
+
+        <!-- Hidden fields for CustomerID, ServiceID, and EmployeeID -->
+        <input type="hidden" name="customer_id" value="1">  <!-- Assume customer ID 1 -->
+        <input type="hidden" name="service_id" value="1">   <!-- Assume service ID 1 -->
+        <input type="hidden" name="employee_id" value="1">  <!-- Assume employee ID 1 -->
+
+        <input type="submit" value="Submit Feedback">
+    </form>
+
+    <h2>Customer Feedback</h2>
+    <?php
+    # Reconnect to database to display the comments
+    $con = mysqli_connect("localhost", "root", "", "salon");
+
+    $result = mysqli_query($con, "SELECT Comments, Rating, ReviewDate FROM reviews ORDER BY ReviewDate DESC");
+
+    if (mysqli_num_rows($result) > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            echo "<div style='border:1px solid #ccc; padding:10px; margin-bottom:10px;'>";
+            echo "<strong>Rating:</strong> " . $row['Rating'] . "/5<br>";
+            echo "<strong>Comments:</strong> " . $row['Comments'] . "<br>";
+            echo "<strong>Date:</strong> " . $row['ReviewDate'] . "<br>";
+            echo "</div>";
+        }
+    } else {
+        echo "No feedback available.";
+    }
+
+    # Close the connection
+    mysqli_close($con);
+    ?>
+</body>
+</html>
