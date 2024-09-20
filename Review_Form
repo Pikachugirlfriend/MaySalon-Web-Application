@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="reviews.css" />
+    <style>
+        /* Add CSS styling for the feedback form */
+        .feedback-form {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #f9f9f9;
+        }
+
+        .feedback-form h2 {
+            margin-bottom: 15px;
+        }
+
+        .feedback-form input,
+        .feedback-form textarea {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .feedback-form button {
+            padding: 10px 15px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .feedback-form button:hover {
+            background-color: #218838;
+        }
+    </style>
+    <title>Customer Review</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="container__left">
+              <h1>Read what our customers love about us</h1>
+              <p>
+                "We value your thoughts and suggestions as they help us continuously improve our services. 
+                Check out some of the reviews from our customers, and feel free to leave your own feedback below! 
+                Your insights are invaluable to us."
+              </p>
+              <input type="text" placeholder="Search reviews..." class="search-bar" />
+            </div>
+            <div class="container__right scroll-container">
+              <article class="card">
+                <img src="P1.jpg" alt="Photo of customer Emma" />
+                <div class="card__content">
+                  <span><i class="ri-double-quotes-l"></i></span>
+                  <div class="card__details">
+                    <p>
+                      "I just had my hair dyed at May Salon, and I'm absolutely in love! 
+                      The stylist took the time to understand exactly what I wanted, and the color turned out stunning. 
+                      It's vibrant and lasts for weeks. Highly recommend!"
+                    </p>
+                    <h5>@MichelleKhoo</h5>
+                  </div>
+                </div>
+              </article>
+    
+              <article class="card">
+                <img src="P2.jpg" alt="Photo of customer Sophia" />
+                <div class="card__content">
+                  <span><i class="ri-double-quotes-l"></i></span>
+                  <div class="card__details">
+                    <p>
+                      If you're looking for a top-notch salon with exceptional service, look no further than May Salon. 
+                      The team is friendly, professional, and really knows their stuff. My hair has never looked better!
+                    </p>
+                    <h5>@Sophia</h5>
+                  </div>
+                </div>
+              </article>
+    
+              <article class="card">
+                <img src="P3.jpg" alt="Photo of customer Lily" />
+                <div class="card__content">
+                  <span><i class="ri-double-quotes-l"></i></span>
+                  <div class="card__details">
+                    <p>
+                      The stylist was incredibly skilled and really listened to what I wanted. 
+                      My haircut is exactly what I envisioned, and the ambiance of the salon was so relaxing. 
+                      Highly recommend!
+                    </p>
+                    <h5>@SarahNg</h5>
+                  </div>
+                </div>
+              </article>
+    
+              <article class="card">
+                <img src="P4.jpg" alt="Photo of customer Mia" />
+                <div class="card__content">
+                  <span><i class="ri-double-quotes-l"></i></span>
+                  <div class="card__details">
+                    <p>
+                      I had an amazing experience at May Salon. The staff was welcoming and made me feel comfortable throughout the process. 
+                      The end result exceeded my expectations!
+                    </p>
+                    <h5>@ChloeLim</h5>
+                  </div>
+                </div>
+              </article>
+    
+              <article class="card">
+                <img src="P5.jpg" alt="Photo of customer Ava" />
+                <div class="card__content">
+                  <span><i class="ri-double-quotes-l"></i></span>
+                  <div class="card__details">
+                    <p>
+                      This was my first visit to May Salon, and I'm extremely pleased with my new hairstyle. 
+                      The stylist really understood what I wanted, and the whole experience was relaxing.
+                    </p>
+                    <h5>@RachelWong</h5>
+                  </div>
+                </div>
+              </article>
+    
+              <article class="card">
+                <img src="P6.jpg" alt="Photo of customer Zoe" />
+                <div class="card__content">
+                  <span><i class="ri-double-quotes-l"></i></span>
+                  <div class="card__details">
+                    <p>
+                      "Amazing experience! I went for a bob cut, and the results were better than I could have imagined. 
+                      The stylist was professional and made me feel comfortable throughout the process. I’ve received so many compliments!"
+                    </p>
+                    <h5>@LindaWong</h5>
+                  </div>
+                </div>
+              </article>
+    
+              <article class="card">
+                <img src="P7.jpg" alt="Photo of customer Chloe" />
+                <div class="card__content">
+                  <span><i class="ri-double-quotes-l"></i></span>
+                  <div class="card__details">
+                    <p>
+                      "Just got my haircut here, and it's incredible! The stylist used high-quality techniques that made my hair look voluminous and healthy. 
+                      I love how stylish and fresh I feel now. Will definitely return!"
+                    </p>
+                    <h5>@AmySiew</h5>
+                  </div>
+                </div>
+              </article>
+    
+              <article class="card">
+                <img src="P8.jpg" alt="Photo of customer Grace" />
+                <div class="card__content">
+                  <span><i class="ri-double-quotes-l"></i></span>
+                  <div class="card__details">
+                    <p>
+                      The service was outstanding! I highly recommend May Salon to anyone looking for a quality experience.
+                    </p>
+                    <h5>@Grace</h5>
+                  </div>
+                </div>
+              </article>
+    
+              <article class="card">
+                <img src="P9.jpg" alt="Photo of customer Scarlett" />
+                <div class="card__content">
+                  <span><i class="ri-double-quotes-l"></i></span>
+                  <div class="card__details">
+                    <p>
+                      "I got a trim and some face-framing layers at May Salon, and I’m thrilled with how they turned out! 
+                      The stylist was patient and made sure I was happy with each step. 
+                      The atmosphere was relaxing, and the service was exceptional."
+                    </p>
+                    <h5>@StephanieTiong</h5>
+                  </div>
+                </div>
+              </article>
+    
+              <article class="card">
+                <img src="P10.jpg" alt="Photo of customer Mia" />
+                <div class="card__content">
+                  <span><i class="ri-double-quotes-l"></i></span>
+                  <div class="card__details">
+                    <p>
+                      "Fantastic service! I went for a complete style change, and I’m so happy with the results. 
+                      The stylist gave me tips on how to style my new look and keep my hair healthy. I’ll be coming back for sure!"
+                    </p>
+                    <h5>@EmmaRoberts</h5>
+                  </div>
+                </div>
+              </article>
+    
+              <article class="card">
+                <img src="P11.jpg" alt="Photo of customer Lily" />
+                <div class="card__content">
+                  <span><i class="ri-double-quotes-l"></i></span>
+                  <div class="card__details">
+                    <p>
+                      "I had an amazing experience getting my hair rebonded here. The staff is not only friendly but also super skilled. 
+                      They transformed my frizzy hair into sleek perfection!"
+                    </p>
+                    <h5>@LilyLau</h5>
+                  </div>
+                </div>
+              </article>
+    
+              <article class="card">
+                <img src="P12.jpg" alt="Photo of customer Emma" />
+                <div class="card__content">
+                  <span><i class="ri-double-quotes-l"></i></span>
+                  <div class="card__details">
+                    <p>
+                      "May Salon offers the best hair treatments! Make it the hair look healty.
+                    </p>
+                    <h5>@VivianLau</h5>
+                  </div>
+                </div>
+              </article>
+    
+              <article class="card">
+                <img src="P13.jpg" alt="Photo of customer Sophia" />
+                <div class="card__content">
+                  <span><i class="ri-double-quotes-l"></i></span>
+                  <div class="card__details">
+                    <p>
+                      I love my new hairstyle! The stylists are so talented and really take the time to understand what you want.
+                    </p>
+                    <h5>@Sofia</h5>
+                  </div>
+                </div>
+              </article>
+    
+              <article class="card">
+                <img src="P14.jpg" alt="Photo of customer Ava" />
+                <div class="card__content">
+                  <span><i class="ri-double-quotes-l"></i></span>
+                  <div class="card__details">
+                    <p>
+                      "May Salon is my go-to place for manicures! The staff is so friendly, and they always have the latest colors and designs. 
+                      My nails look amazing, and I love how they take their time to ensure everything is perfect!"
+                    </p>
+                    <h5>@Avannah</h5>
+                  </div>
+                </div>
+              </article>
+    
+              <article class="card">
+                <img src="P15.jpg" alt="Photo of customer Zoe" />
+                <div class="card__content">
+                  <span><i class="ri-double-quotes-l"></i></span>
+                  <div class="card__details">
+                    <p>
+                      "Just got my hair dyed here, and it's incredible! The stylist used high-quality products that didn’t damage my hair at all. 
+                      The color is vibrant, and I love how shiny my hair looks now. Will definitely return for my next dye!"
+                    </p>
+                    <h5>@Zoe</h5>
+                  </div>
+                </div>
+              </article>
+    
+              <article class="card">
+                <img src="P16.jpg" alt="Photo of customer Chloe" />
+                <div class="card__content">
+                  <span><i class="ri-double-quotes-l"></i></span>
+                  <div class="card__details">
+                    <p>
+                      "From the moment I walked in, the team made me feel welcome. 
+                      They were friendly and professional, ensuring I had a great experience. I can't recommend their services enough!"
+                    </p>
+                    <h5>@ChloeChing</h5>
+                  </div>
+                </div>
+              </article>
+    
+              <article class="card">
+                <img src="P17.jpg" alt="Photo of customer Grace" />
+                <div class="card__content">
+                  <span><i class="ri-double-quotes-l"></i></span>
+                  <div class="card__details">
+                    <p>
+                      "I had a fantastic experience at May Salon! The team is super knowledgeable and helped me pick the perfect shade for my skin tone.
+                       The results are gorgeous, and I feel like a brand new person!"
+                    </p>
+                    <h5>@GraceChang</h5>
+                  </div>
+                </div>
+              </article>
+    
+              <article class="card">
+                <img src="P18.jpg" alt="Photo of customer Scarlett" />
+                <div class="card__content">
+                  <span><i class="ri-double-quotes-l"></i></span>
+                  <div class="card__details">
+                    <p>
+                      "May Salon is the best place for hair dye! The color is so rich and the application was so smooth. 
+                      I was a bit nervous about trying a bold color, but the stylist reassured me and I couldn't be happier with the outcome!"
+                    </p>
+                    <h5>@ScarlettScott</h5>
+                  </div>
+                </div>
+              </article>
+    
+              <article class="card">
+                <img src="P19.jpg" alt="Photo of customer Emily" />
+                <div class="card__content">
+                  <span><i class="ri-double-quotes-l"></i></span>
+                  <div class="card__details">
+                    <p>
+                      "I had an amazing experience at May Salon! From the moment I walked in, I felt welcomed. 
+                      The staff is friendly and knowledgeable. I left feeling beautiful with my new haircut and nails!"
+                    </p>
+                    <h5>@EmilyLing</h5>
+                  </div>
+                </div>
+              </article>
+    
+              <article class="card">
+                <img src="P20.jpg" alt="Photo of customer Hannah" />
+                <div class="card__content">
+                  <span><i class="ri-double-quotes-l"></i></span>
+                  <div class="card__details">
+                    <p>
+                      "Amazing experience! I went for a balayage and the results were better than I could have imagined. 
+                      The color blends beautifully, and I've received so many compliments. 
+                      The staff was professional and made me feel comfortable throughout the process."
+                    </p>
+                    <h5>@Hannah</h5>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+    </header>
+
+    <div class="feedback-form">
+        <h2>Leave Your Feedback</h2>
+        <form id="reviewForm">
+            <input type="text" id="username" placeholder="Your Name" required />
+            <textarea id="userReview" placeholder="Your Review" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <footer class="footer-distributed">
+        <div class="footer-left">
+            <h3>MaY SaLoN</h3>
+            <p class="footer-links">
+                <a href="index.php">Home</a>
+                |
+                <a href="aboutus.php">About Us</a>
+                |
+                <a href="services.php">Service</a>
+                |
+                <a href="feedback.php">Feedback</a>
+            </p>
+            <p class="footer-company-name">&copy; 2024 May Salon. All rights reserved.</p>
+        </div>
+        <div class="footer-center">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p>Address: Kota Kinabalu, Sabah. Malaysia</p>
+            </div>
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>Phone: +011-1272 9290</p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:maysalonkk@yahoo.com">maysalonkk@yahoo.com</a></p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <span>About MaY SaLoN</span>
+                <strong>May Salon</strong> is a modern beauty salon offering a range of hair and beauty services. 
+                Skilled stylists provide personalized treatments and focus on customer satisfaction.
+            </p>
+            <div class="footer-icons">
+                <a href="https://www.facebook.com/profile.php?id=61562373323389&is_tour_completed"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.instagram.com/maysalonkk?igsh=eHk3bjA0ODNtN3Bw"><i class="fa fa-instagram"></i></a>
+                <a href="https://mail.yahoo.com/d/folders/1?.intl=my&.lang=en-MY"><i class="fa fa-yahoo"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const searchBar = document.querySelector('.search-bar');
+        const cardsContainer = document.querySelector('.scroll-container');
+        const reviewForm = document.getElementById('reviewForm');
+
+        // Predefined user profile image URL
+        const userProfileImage = 'path/to/profile-image.jpg'; // Update this with the actual URL or path
+
+        // Load existing reviews from localStorage
+        loadReviews();
+
+        // Search functionality
+        searchBar.addEventListener('input', () => {
+            const searchTerm = searchBar.value.toLowerCase();
+            const cards = cardsContainer.querySelectorAll('.card');
+            cards.forEach(card => {
+                const reviewText = card.querySelector('.card__details p').textContent.toLowerCase();
+                card.style.display = reviewText.includes(searchTerm) ? '' : 'none';
+            });
+        });
+
+        // Feedback form submission
+        reviewForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const username = document.getElementById('username').value;
+            const userReview = document.getElementById('userReview').value;
+
+            // Create new review card
+            const newCard = document.createElement('article');
+            newCard.classList.add('card');
+            newCard.innerHTML = `
+                <img src="${userProfileImage}" alt="Photo of ${username}" />
+                <div class="card__content">
+                    <span><i class="ri-double-quotes-l"></i></span>
+                    <div class="card__details">
+                        <p>"${userReview}"</p>
+                        <h5>@${username}</h5>
+                    </div>
+                </div>
+            `;
+
+            // Append new card to the review section
+            cardsContainer.appendChild(newCard);
+
+            // Save the new review to localStorage
+            saveReview(username, userReview);
+
+            // Clear the form
+            reviewForm.reset();
+        });
+
+        // Load existing reviews from localStorage
+        function loadReviews() {
+            const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+            reviews.forEach(review => {
+                const reviewCard = document.createElement('article');
+                reviewCard.classList.add('card');
+                reviewCard.innerHTML = `
+                    <img src="${userProfileImage}" alt="Photo of ${review.username}" />
+                    <div class="card__content">
+                        <span><i class="ri-double-quotes-l"></i></span>
+                        <div class="card__details">
+                            <p>"${review.comment}"</p>
+                            <h5>@${review.username}</h5>
+                        </div>
+                    </div>
+                `;
+                cardsContainer.appendChild(reviewCard);
+            });
+        }
+
+        // Save a review to localStorage
+        function saveReview(username, comment) {
+            const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+            reviews.push({ username, comment });
+            localStorage.setItem('reviews', JSON.stringify(reviews));
+        }
+    });
+    </script>
+</body>
+</html>
