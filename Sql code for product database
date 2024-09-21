@@ -13,3 +13,40 @@ VALUES
 ALTER TABLE products
 ADD COLUMN Product_img_name VARCHAR(255);
 
+UPDATE products
+SET Product_img_name = 'Shampoo.jpg'
+WHERE ProductID = 303;
+
+UPDATE products
+SET Product_img_name = 'Conditioner.jpg'
+WHERE ProductID = 304;
+
+UPDATE products
+SET Product_img_name = 'Tonic.jpg'
+WHERE ProductID = 305;
+
+UPDATE products
+SET Product_img_name = 'Booster.jpg'
+WHERE ProductID = 306;
+
+UPDATE products
+SET Product_img_name = 'HairMask.jpg'
+WHERE ProductID = 307;
+
+UPDATE products
+SET Product_img_name = 'MIST.png'
+WHERE ProductID = 308;
+
+UPDATE products
+SET Product_img_name = 'Serum.jpg'
+WHERE ProductID = 309;
+
+UPDATE products
+SET Product_img_name = 'HAIR OIL.png'
+WHERE ProductID = 310;
+
+UPDATE products
+SET Product_img_name = 'TREATMENT.png'
+WHERE ProductID = 311;
+
+
