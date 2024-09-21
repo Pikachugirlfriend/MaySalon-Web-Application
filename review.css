@@ -264,7 +264,7 @@ footer {
 }
 
 .footer-distributed .footer-center p a:hover {
-  color: #dee2e4;
+  color:  #87898a;
 }
 
 /* Footer Right */
@@ -349,7 +349,7 @@ footer {
 }
 
 .back-to-top:hover{
-  background-color: burlywood;  
+  background-color: #87898a;  
 }
 
 .back-to-top:hover span{
