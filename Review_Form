@@ -44,6 +44,36 @@
         .feedback-form button:hover {
             background-color: #218838;
         }
+
+        .back-to-top{
+          bottom: 2rem;
+          position: fixed;
+          display: inline;
+          right:2rem;
+          justify-content: center;
+          background-color: white;
+          border-radius: 0.5rem;
+          padding: 0.5rem;
+          text-decoration: none;
+          transition: 0.2s ease-out;
+          align-items:center;
+        }
+
+        .back-to-top span{
+         color: black;
+         font-size: 2rem;
+         transition: 0.2s ease-out;
+        }
+
+      .back-to-top:hover{
+        background-color: #87898a;  
+      }
+
+      .back-to-top:hover span{
+        transform: translateY(-4px);
+      }
+
+        
     </style>
     <title>Customer Review</title>
 </head>
@@ -393,6 +423,11 @@
                 <a href="https://mail.yahoo.com/d/folders/1?.intl=my&.lang=en-MY"><i class="fa fa-yahoo"></i></a>
             </div>
         </div>
+        <!-- Back to Top Button-->
+          <a href="#" class="back-to-top">
+            <span class="material-icons">arrow_upward</span>
+          </a> 
+          
     </footer>
 
     <script>
