@@ -9,3 +9,7 @@ VALUES
 (309, 'Serum 50ml', 80, 'A lightweight serum that tames frizz, enhances shine, and protects against heat damage for a polished, sleek look.', 7, 'Available', 1),
 (310, 'Hair Oil 50ml', 80, 'A nourishing blend of oils that adds deep moisture, smoothness, and shine, making your hair feel silky and soft.', 6, 'Available', 1),
 (311, 'Treatment 100g', 120, 'A powerful hair treatment that repairs, nourishes, and strengthens hair from the roots, restoring it to its healthiest state.', 9, 'Available', 1);
+
+ALTER TABLE products
+ADD COLUMN Product_img_name VARCHAR(255);
+
