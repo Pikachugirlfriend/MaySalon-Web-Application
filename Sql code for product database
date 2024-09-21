@@ -46,7 +46,7 @@ SET Product_img_name = 'HAIR OIL.png'
 WHERE ProductID = 310;
 
 UPDATE products
-SET Product_img_name = 'TREATMENT.png'
+SET Product_img_name = 'hTREATMENT.png'
 WHERE ProductID = 311;
 
 
