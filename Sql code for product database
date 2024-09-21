@@ -1,0 +1,11 @@
+INSERT INTO products (ProductID, Name, Price, Details, Stock, Status, CategoryID) 
+VALUES 
+(302, 'Shampoo 800ml', 100, 'A gentle yet effective cleanser made with organic ingredients and enriched with vitamins. Suitable for all hair types, this shampoo nourishes the scalp and strengthens your hair, leaving it soft, shiny, and healthy.', 10, 'available', 1),
+(303, 'Conditioner 500ml', 90, 'Smoothens and hydrates your hair, reducing frizz and improving texture for a silky, healthy finish. Ideal for all hair types.', 15, 'available', 1),
+(304, 'Hair Tonic 80ml', 120, 'A revitalizing tonic designed to strengthen the scalp and promote healthier hair growth. Packed with essential nutrients.', 8, 'available', 1),
+(305, 'Booster 80ml', 120, 'Boosts your hair’s volume and shine, adding life and vitality to dull or limp hair. A great pick-me-up for tired strands.', 12, 'available', 1),
+(306, 'Hair Mask 100g', 120, 'An intensive treatment that deeply moisturizes and repairs damaged hair, leaving it smooth, shiny, and full of life.', 7, 'available', 1),
+(307, 'Hair Mist 50ml', 70, 'A refreshing mist that adds instant shine and smoothness, while keeping your hair smelling great all day long.', 20, 'available', 1),
+(308, 'Serum 50ml', 80, 'A lightweight serum that tames frizz, enhances shine, and protects against heat damage for a polished, sleek look.', 13, 'available', 1),
+(309, 'Hair Oil 50ml', 80, 'A nourishing blend of oils that adds deep moisture, smoothness, and shine, making your hair feel silky and soft.', 18, 'available', 1),
+(310, 'Treatment 100g', 120, 'A powerful hair treatment that repairs, nourishes, and strengthens hair from the roots, restoring it to its healthiest state.', 5, 'available', 1);
